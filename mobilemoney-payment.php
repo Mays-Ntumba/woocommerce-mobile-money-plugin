@@ -103,15 +103,15 @@ function init_mobilemoney_payment() {
                     'description' => 'This controls the description which the user sees during checkout.',
                     'default'     => 'Payez à partir de votre compte mobile money',
                 ),
-                'mtnmoney_msisdn' => array(
-                    'title'       => 'Numéro MTN Money',
+                'Airtelmoney_msisdn' => array(
+                    'title'       => 'Numéro Airtel Money',
                     'type'        => 'text',
                     'default'     => '05000000',
                 ),
-                'mtnmoney_ussd_code' => array(
-                    'title'       => 'Code USSD MTN Money',
+                'Airtelmoney_ussd_code' => array(
+                    'title'       => 'Code USSD Airtel Money',
                     'type'        => 'text',
-                    'default'     => '*133#',
+                    'default'     => '*501#',
                 ),
                 'orangemoney_msisdn' => array(
                     'title'       => 'Numéro Orange Money',
@@ -123,15 +123,15 @@ function init_mobilemoney_payment() {
                     'type'        => 'text',
                     'default'     => '*144#',
                 ),
-                'moovmoney_msisdn' => array(
-                    'title'       => 'Numéro Moov Money',
+                'M-pesa_msisdn' => array(
+                    'title'       => 'Numéro M-pesa',
                     'type'        => 'text',
                     'default'     => '01000000',
                 ),
-                'moovmoney_ussd_code' => array(
-                    'title'       => 'Code USSD Moov Money',
+                'M-pesa_ussd_code' => array(
+                    'title'       => 'Code USSD M-pesa',
                     'type'        => 'text',
-                    'default'     => '*155#',
+                    'default'     => '*1122#',
                 )
             );
  
@@ -153,14 +153,14 @@ function init_mobilemoney_payment() {
                 <select name='mm_operator'>
                 ";
 
-                if($this->get_option( 'mtnmoney_msisdn') != ""){
-                    echo '<option value="MTN Money">MTN Money ('. $this->get_option( 'mtnmoney_msisdn') .')</option>';
+                if($this->get_option( 'Airtel money_msisdn') != ""){
+                    echo '<option value="Airtel Money">Airtel Money ('. $this->get_option( 'Airtelmoney_msisdn') .')</option>';
                 }
                 if($this->get_option( 'orangemoney_msisdn') != ""){
                     echo '<option value="Orange Money">Orange Money ('. $this->get_option( 'orangemoney_msisdn') .')</option>';
                 }
-                if($this->get_option( 'moovmoney_msisdn') != ""){
-                    echo '<option value="Moov Money">Moov Money ('. $this->get_option( 'moovmoney_msisdn') .')</option>';
+                if($this->get_option( 'M-pesa_msisdn') != ""){
+                    echo '<option value="M-pesa">Moov Money ('. $this->get_option( 'M-pesa_msisdn') .')</option>';
                 }
                 
                 
