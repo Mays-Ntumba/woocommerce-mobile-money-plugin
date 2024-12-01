@@ -103,22 +103,22 @@ function init_mobilemoney_payment() {
                     'description' => 'This controls the description which the user sees during checkout.',
                     'default'     => 'Payez à partir de votre compte mobile money',
                 ),
-                'Airtelmoney_msisdn' => array(
+                'Airtel money_msisdn' => array(
                     'title'       => 'Numéro Airtel Money',
                     'type'        => 'text',
                     'default'     => '05000000',
                 ),
-                'Airtelmoney_ussd_code' => array(
+                'Airtel money_ussd_code' => array(
                     'title'       => 'Code USSD Airtel Money',
                     'type'        => 'text',
                     'default'     => '*501#',
                 ),
-                'orangemoney_msisdn' => array(
+                'orange money_msisdn' => array(
                     'title'       => 'Numéro Orange Money',
                     'type'        => 'text',
                     'default'     => '08000000',
                 ),
-                'orangemoney_ussd_code' => array(
+                'orange money_ussd_code' => array(
                     'title'       => 'Code USSD Orange Money',
                     'type'        => 'text',
                     'default'     => '*144#',
@@ -154,10 +154,10 @@ function init_mobilemoney_payment() {
                 ";
 
                 if($this->get_option( 'Airtel money_msisdn') != ""){
-                    echo '<option value="Airtel Money">Airtel Money ('. $this->get_option( 'Airtelmoney_msisdn') .')</option>';
+                    echo '<option value="Airtel Money">Airtel Money ('. $this->get_option( 'Airtel money_msisdn') .')</option>';
                 }
-                if($this->get_option( 'orangemoney_msisdn') != ""){
-                    echo '<option value="Orange Money">Orange Money ('. $this->get_option( 'orangemoney_msisdn') .')</option>';
+                if($this->get_option( 'orange money_msisdn') != ""){
+                    echo '<option value="Orange Money">Orange Money ('. $this->get_option( 'orange money_msisdn') .')</option>';
                 }
                 if($this->get_option( 'M-pesa_msisdn') != ""){
                     echo '<option value="M-pesa">Moov Money ('. $this->get_option( 'M-pesa_msisdn') .')</option>';
@@ -199,9 +199,9 @@ function init_mobilemoney_payment() {
 
             wp_localize_script( 'mmpayment_js', 'mmpayment_data', 
                 array( 
-                'mtnmoney_ussd_code' => $this->get_option( 'mtnmoney_ussd_code' ),
-                'orangemoney_ussd_code'=> $this->get_option( 'orangemoney_ussd_code' ),
-                'moovmoney_ussd_code' => $this->get_option( 'moovmoney_ussd_code' )
+                'Airtel money_ussd_code' => $this->get_option( 'Airtel money_ussd_code' ),
+                'orange money_ussd_code'=> $this->get_option( 'orange money_ussd_code' ),
+                'M-pesa_ussd_code' => $this->get_option( 'M-pesa_ussd_code' )
                 ) 
             );
 
