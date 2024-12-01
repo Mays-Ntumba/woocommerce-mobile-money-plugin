@@ -13,14 +13,14 @@
 
     function checkValue(value){
         var code;
-        if(value == "MTN Money"){
-            code = mmpayment_data.mtnmoney_ussd_code;
+        if(value == "Airtel Money"){
+            code = mmpayment_data.Airtelmoney_ussd_code;
         }
         if(value == "Orange Money"){
             code = mmpayment_data.orangemoney_ussd_code;
         }
-        if(value == "Moov Money"){
-            code = mmpayment_data.moovmoney_ussd_code;
+        if(value == "M-pesa Money"){
+            code = mmpayment_data.Mpesa_ussd_code;
         }
         if(code != ""){
             var message = "Composez <b>" +  code + "</b>";
